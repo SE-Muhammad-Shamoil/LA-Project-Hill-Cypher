@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Hill Cipher</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center p-4 font-mono text-green-400" background="bac.avif">
+
+  <div class="bg-black border-2 border-green-600 shadow-[0_0_10px_rgba(34,197,94,0.8)] rounded-2xl p-6 w-full max-w-xl">
+    <h1 class="text-3xl font-extrabold mb-6 text-center tracking-widest drop-shadow-[0_0_8px_rgba(34,197,94,0.8)]">
+      Hill Cipher
+    </h1>
+
+    <div class="mb-6">
+      <label for="message" class="block font-semibold mb-2 tracking-widest text-green-400">Enter Message:</label>
+      <textarea id="message" rows="3" 
+        class="w-full p-3 bg-black border border-green-600 rounded-lg text-green-400 placeholder-green-600 tracking-wide focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-0"></textarea>
+    </div>
+
+    <div class="mb-6">
+      <label for="action" class="block font-semibold mb-2 tracking-widest text-green-400">Action:</label>
+      <select id="action" 
+        class="w-full p-3 bg-black border border-green-600 rounded-lg text-green-400 tracking-wide focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-0">
+        <option value="encrypt" class="bg-black text-green-400">Encrypt</option>
+        <option value="decrypt" class="bg-black text-green-400">Decrypt</option>
+      </select>
+    </div>
+
+    <button 
+      onclick="processMessage()" 
+      class="w-full py-3 rounded-lg bg-green-700 text-black font-extrabold tracking-widest hover:bg-green-500 hover:shadow-lg hover:shadow-green-400 transition duration-300">
+      SUBMIT
+    </button>
+
+    <div class="mt-6">
+      <label class="block font-semibold mb-2 tracking-widest text-green-400">Result:</label>
+      <div id="result" 
+        class="bg-black border border-green-600 rounded-lg p-3 text-green-400 min-h-[4rem] whitespace-pre-wrap drop-shadow-[0_0_8px_rgba(34,197,94,0.7)]">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
